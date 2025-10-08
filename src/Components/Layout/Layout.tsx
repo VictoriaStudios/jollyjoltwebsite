@@ -1,32 +1,31 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
+import { useDropdown } from './useDropdown';
 
 const Layout: React.FC = () => {
-  const [isGamesDropdownOpen, setIsGamesDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLLIElement>(null);
+  const { openDropdown, toggleDropdown, closeDropdown, useOutsideClick } = useDropdown();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleGamesDropdown = () => {
-    setIsGamesDropdownOpen(!isGamesDropdownOpen);
+  const gamesDropdownRef = useRef<HTMLLIElement>(null);
+  const privacyDropdownRef = useRef<HTMLLIElement>(null);
+
+  useOutsideClick(gamesDropdownRef, () => {
+    if (openDropdown === 'games') {
+      closeDropdown();
+    }
+  });
+
+  useOutsideClick(privacyDropdownRef, () => {
+    if (openDropdown === 'privacy') {
+      closeDropdown();
+    }
+  });
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  const closeGamesDropdown = () => {
-    setIsGamesDropdownOpen(false);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        closeGamesDropdown();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   return (
     <div className={styles.layout}>
@@ -36,29 +35,41 @@ const Layout: React.FC = () => {
             <img src="/images/Jolly Jolt Logo Large.svg" alt="Jolly Jolt Games" />
           </Link>
         </div>
-        <nav className={styles.nav}>
+        <div className={styles.hamburger} onClick={toggleMobileMenu}>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+        </div>
+        <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navMobileOpen : ''}`}>
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/" onClick={toggleMobileMenu}>HOME</Link>
             </li>
-            <li className={styles.dropdown} ref={dropdownRef}>
-              <button onClick={toggleGamesDropdown} className={styles.dropbtn}>
+            <li className={styles.dropdown} ref={gamesDropdownRef}>
+              <button onClick={() => toggleDropdown('games')} className={styles.dropbtn}>
                 GAMES
               </button>
-              {isGamesDropdownOpen && (
+              {openDropdown === 'games' && (
                 <div className={styles.dropdownContent}>
-                  <Link to="/example-game" onClick={closeGamesDropdown}>Example Game</Link>
+                  <Link to="/tunnel-dodge" onClick={closeDropdown}>TunnelDodge</Link>
                 </div>
               )}
             </li>
             <li>
-              <Link to="/terms-of-use">TERMS OF USE</Link>
+              <Link to="/terms-of-use" onClick={toggleMobileMenu}>TERMS OF USE</Link>
+            </li>
+            <li className={styles.dropdown} ref={privacyDropdownRef}>
+              <button onClick={() => toggleDropdown('privacy')} className={styles.dropbtn}>
+                PRIVACY POLICY
+              </button>
+              {openDropdown === 'privacy' && (
+                <div className={styles.dropdownContent}>
+                  <Link to="/tunnel-dodge-privacy-policy" onClick={closeDropdown}>TunnelDodge</Link>
+                </div>
+              )}
             </li>
             <li>
-              <Link to="/privacy-policy">PRIVACY POLICY</Link>
-            </li>
-            <li>
-              <Link to="/about-us">ABOUT US</Link>
+              <Link to="/about-us" onClick={toggleMobileMenu}>ABOUT US</Link>
             </li>
           </ul>
         </nav>
