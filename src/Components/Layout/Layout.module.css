@@ -34,7 +34,7 @@
 }
 
 .nav a:hover {
-  color: var(--primary-color);
+  color: var(--main-color);
 }
 
 .main {
