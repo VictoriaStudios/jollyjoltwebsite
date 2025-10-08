@@ -1,0 +1,10 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify: center;
+  align-items: center;
+}
+.logo{
+  max-height: 70vh;
+  width: auto;
+}
