@@ -1,5 +1,49 @@
 .layout {
   display: flex;
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.logo img {
+  height: 50px;
+}
+
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-left: 1rem;
+}
+
+.nav a {
+  color: var(--quartery-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--main-color);
+}
+
+.main {
+  flex-grow: 1;
+  padding: 1rem;
+}
   flex-direction: column;
   min-height: 100vh;
 }
@@ -34,7 +78,7 @@
 }
 
 .nav a:hover {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 .main {

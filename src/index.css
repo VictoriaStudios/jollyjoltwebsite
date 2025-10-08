@@ -1,4 +1,10 @@
+:root {
+  --main-color: #ec7530ff;
+  --secondary-color: #1db3e7ff;
+  --tertiary-color: #3eb0a9ff;
+  --quartery-color: #f8c931;
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 :root {
   --main-color: #ec7530ff;
@@ -11,9 +17,32 @@
   color: var(--main-color);
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family:'Luckiest Guy';
+}
+
 body {
   margin: 0;
   font-family: 'Happy Monkey', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+}
+
+*{
+  color: var(--main-color);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
