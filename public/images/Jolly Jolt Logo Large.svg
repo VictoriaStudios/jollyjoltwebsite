@@ -27,22 +27,24 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="0.54895834"
-     inkscape:cx="388.9184"
+     inkscape:cx="389.82922"
      inkscape:cy="564.70588"
      inkscape:window-width="1906"
      inkscape:window-height="1028"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
-     showguides="true" />
+     inkscape:current-layer="layer2"
+     showguides="true"
+     showgrid="false" />
   <defs
      id="defs1" />
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="BG"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:none">
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.21971;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect60"
@@ -50,6 +52,33 @@
        height="1024"
        x="0"
        y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Cirlces"
+     inkscape:highlight-color="#3eb0a9">
+    <circle
+       style="display:inline;fill:#ffffff;stroke:#3eb0a9;stroke-width:7.71045;stroke-dasharray:none;stroke-opacity:1"
+       id="circle60"
+       cx="512"
+       cy="512"
+       inkscape:label="circle outer"
+       r="475.80194" />
+    <circle
+       style="display:inline;fill:none;stroke:#3eb0a9;stroke-width:7.00683;stroke-dasharray:none;stroke-opacity:1"
+       id="path59"
+       cx="512"
+       cy="512"
+       inkscape:label="cirle inner"
+       r="432.38315" />
+    <circle
+       style="display:inline;fill:none;stroke:#3eb0a9;stroke-width:7.34;stroke-dasharray:58.7201;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle59"
+       cx="512"
+       cy="512.00006"
+       inkscape:label="circle middle"
+       r="452.94247" />
   </g>
   <g
      inkscape:label="Logo"
@@ -187,32 +216,5 @@
        style="display:inline;fill:#f8c931;fill-opacity:1;stroke-width:5.43663"
        id="path45"
        inkscape:label="Bolt" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Cirlces"
-     inkscape:highlight-color="#3eb0a9">
-    <circle
-       style="display:inline;fill:none;stroke:#3eb0a9;stroke-width:7.00683;stroke-dasharray:none;stroke-opacity:1"
-       id="path59"
-       cx="512"
-       cy="512"
-       inkscape:label="cirle inner"
-       r="432.38315" />
-    <circle
-       style="display:inline;fill:none;stroke:#3eb0a9;stroke-width:7.34;stroke-dasharray:58.7201;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle59"
-       cx="512"
-       cy="512.00006"
-       inkscape:label="circle middle"
-       r="452.94247" />
-    <circle
-       style="display:inline;fill:none;stroke:#3eb0a9;stroke-width:7.71045;stroke-dasharray:none;stroke-opacity:1"
-       id="circle60"
-       cx="512"
-       cy="512"
-       inkscape:label="circle outer"
-       r="475.80194" />
   </g>
 </svg>
