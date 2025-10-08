@@ -1,14 +1,32 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
 
 const Layout: React.FC = () => {
   const [isGamesDropdownOpen, setIsGamesDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   const toggleGamesDropdown = () => {
     setIsGamesDropdownOpen(!isGamesDropdownOpen);
   };
+
+  const closeGamesDropdown = () => {
+    setIsGamesDropdownOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        closeGamesDropdown();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className={styles.layout}>
@@ -23,13 +41,13 @@ const Layout: React.FC = () => {
             <li>
               <Link to="/">HOME</Link>
             </li>
-            <li className={styles.dropdown}>
+            <li className={styles.dropdown} ref={dropdownRef}>
               <button onClick={toggleGamesDropdown} className={styles.dropbtn}>
                 GAMES
               </button>
               {isGamesDropdownOpen && (
                 <div className={styles.dropdownContent}>
-                  <Link to="/example-game">Example Game</Link>
+                  <Link to="/example-game" onClick={closeGamesDropdown}>Example Game</Link>
                 </div>
               )}
             </li>
