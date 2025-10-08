@@ -1,9 +1,3 @@
-:root {
-  --main-color: #ec7530ff;
-  --secondary-color: #1db3e7ff;
-  --tertiary-color: #3eb0a9ff;
-}
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -15,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #f0f0f0;
+  background-color: var(--main-color);
 }
 
 .logo img {
@@ -31,6 +25,16 @@
 
 .nav li {
   margin-left: 1rem;
+}
+
+.nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--tertiary-color);
 }
 
 .main {
