@@ -60,6 +60,11 @@
   font-family: inherit;
   line-height: inherit;
   font-size:16px;
+  color: var(--quartery-color) !important;
+}
+
+.dropbtn:hover {
+  color: var(--primary-color) !important;
 }
 
 .dropdownContent {
