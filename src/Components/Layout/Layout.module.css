@@ -1,0 +1,39 @@
+:root {
+  --main-color: #ec7530ff;
+  --secondary-color: #1db3e7ff;
+  --tertiary-color: #3eb0a9ff;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-left: 1rem;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 1rem;
+}
