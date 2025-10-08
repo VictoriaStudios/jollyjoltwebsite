@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
 }
 
 .logo img {
@@ -28,13 +28,13 @@
 }
 
 .nav a {
-  color: var(--secondary-color);
+  color: var(--quartery-color);
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav a:hover {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 .main {
