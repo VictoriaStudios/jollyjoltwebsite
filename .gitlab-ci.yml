@@ -20,6 +20,7 @@ pages:
   variables:
     GIT_STRATEGY: none
   script:
+    - cp dist/index.html dist/404.html
     - mv dist public
   artifacts:
     paths:
