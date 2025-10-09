@@ -3,6 +3,7 @@
   --secondary-color: #1db3e7ff;
   --tertiary-color: #3eb0a9ff;
   --quartery-color: #f8c931;
+  color: var(--main-color);
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
@@ -13,9 +14,6 @@
   --quartery-color: #f8c931;
 }
 
-*{
-  color: var(--main-color);
-}
 
 h1,h2,h3,h4,h5,h6{
   font-family:'Luckiest Guy';
