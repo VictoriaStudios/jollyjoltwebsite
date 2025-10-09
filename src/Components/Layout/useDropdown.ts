@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, RefObject } from 'react';
+import { useState, useEffect, type RefObject } from 'react';
 
 export const useDropdown = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -11,7 +11,7 @@ export const useDropdown = () => {
     setOpenDropdown(null);
   };
 
-  const useOutsideClick = (ref: RefObject<HTMLElement>, callback: () => void) => {
+  const useOutsideClick = (ref: RefObject<HTMLElement | null>, callback: () => void) => {
     useEffect(() => {
       const handleClickOutside = (event: MouseEvent) => {
         if (ref.current && !ref.current.contains(event.target as Node)) {
