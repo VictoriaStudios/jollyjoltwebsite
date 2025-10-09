@@ -64,7 +64,7 @@ const Layout: React.FC = () => {
               </button>
               {openDropdown === 'privacy' && (
                 <div className={styles.dropdownContent}>
-                  <Link to="/tunnel-dodge-privacy-policy" onClick={closeDropdown}>TunnelDodge</Link>
+                  <Link to="/tunnel-dodge-privacy-policy" onClick={closeDropdown}>TunnelDodge Privacy Policy</Link>
                 </div>
               )}
             </li>
