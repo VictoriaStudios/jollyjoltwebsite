@@ -154,7 +154,7 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
       </p>
       <h2>10. Contact Us</h2>
       <p>
-        If you have any questions about this Privacy Policy, please contact us at: <strong>marcel.bruna@epistula-electronica.de</strong>.</p>
+        If you have any questions about this Privacy Policy, please contact us at: <strong>jollyjoltgames@gmail.com</strong>.</p>
     </div>
   );
 };
