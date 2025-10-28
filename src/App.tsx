@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import Layout from './Components/Layout/Layout';
 import Home from './pages/Home';
 import TermsOfUse from './pages/TermsOfUse';
@@ -7,7 +7,7 @@ import AboutUs from './pages/AboutUs';
 import TunnelDodge from './pages/TunnelDodge';
 import TunnelDodgePrivacyPolicy from './pages/TunnelDodgePrivacyPolicy';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,

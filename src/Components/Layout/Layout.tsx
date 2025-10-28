@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
 import { useDropdown } from './useDropdown';
+import logo from '/images/Jolly Jolt Logo Large.svg';
 
 const Layout: React.FC = () => {
   const { openDropdown, toggleDropdown, closeDropdown, useOutsideClick } = useDropdown();
@@ -32,7 +33,7 @@ const Layout: React.FC = () => {
       <header className={styles.header}>
         <div className={styles.logo}>
           <Link to="/">
-            <img src="/images/Jolly Jolt Logo Large.svg" alt="Jolly Jolt Games" />
+            <img src={logo} alt="Jolly Jolt Games" />
           </Link>
         </div>
         <div className={styles.hamburger} onClick={toggleMobileMenu}>

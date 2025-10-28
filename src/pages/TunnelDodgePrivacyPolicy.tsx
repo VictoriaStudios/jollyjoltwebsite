@@ -15,16 +15,16 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
       </p>
       <h2>1. Information We Collect</h2>
       <h3>1.1. Data You Provide Us</h3>
-      <p>
+      <div>
         We may collect information that you provide to us directly, such as when you:
         <ul>
           <li>Contact us for customer support.</li>
           <li>Make an in-app purchase.</li>
         </ul>
         This information may include your name, email address, and any other information you choose to provide.
-      </p>
+      </div>
       <h3>1.2. Data We Collect Automatically</h3>
-      <p>
+      <div>
         We and our partners automatically collect certain information when you play the Game. This information includes:
         <ul>
           <li>
@@ -45,18 +45,18 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
             </ul>
           </li>
         </ul>
-      </p>
+      </div>
       <h3>1.3. Data for In-App Purchases</h3>
-      <p>
+      <div>
         When you make an in-app purchase (IAP), we collect information related to that purchase. This includes:
         <ul>
           <li>Your username (if you have one in the game).</li>
           <li>A record of the purchase.</li>
         </ul>
         This information is stored securely on a Virtual Private Server (VPS) and/or Google Cloud Functions to manage your purchases and provide you with the content you've bought.
-      </p>
+      </div>
       <h2>2. How We Use Your Information</h2>
-      <p>
+      <div>
         We use the information we collect for various purposes, including to:
         <ul>
           <li>Operate, maintain, and improve the Game.</li>
@@ -66,9 +66,9 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
           <li>Serve personalized advertising.</li>
           <li>Comply with legal obligations and prevent fraud.</li>
         </ul>
-      </p>
+      </div>
       <h2>3. Legal Basis for Processing (for EEA/UK Users)</h2>
-      <p>
+      <div>
         If you are a user in the European Economic Area (EEA) or the United Kingdom (UK), we rely on the following legal bases for processing your personal data:
         <ul>
           <li>
@@ -81,9 +81,9 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
             <strong>Legitimate Interests:</strong> We process your data for our legitimate interests, such as for analytics and improving the Game, provided that these interests are not overridden by your rights and interests.
           </li>
         </ul>
-      </p>
+      </div>
       <h2>4. How We Share Your Information</h2>
-      <p>
+      <div>
         We may share your information with third parties in the following situations:
         <ul>
           <li>
@@ -96,11 +96,11 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
             <strong>To Protect Our Rights:</strong> We may share information to protect the rights, property, or safety of ourselves, our players, or others.
           </li>
         </ul>
-      </p>
+      </div>
       <h2>5. Your Rights and Choices</h2>
       <p>You have certain rights and choices regarding your personal information.</p>
       <h3>5.1. Your Rights</h3>
-      <p>
+      <div>
         Depending on your location, you may have the following rights:
         <ul>
           <li>
@@ -123,9 +123,9 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
           </li>
         </ul>
         To exercise these rights, please contact us at the email address provided below.
-      </p>
+      </div>
       <h3>5.2. California Residents</h3>
-      <p>
+      <div>
         If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA). These include the right to:
         <ul>
           <li>Know what personal information is being collected about you.</li>
@@ -135,7 +135,7 @@ const TunnelDodgePrivacyPolicy: React.FC = () => {
           <li>Equal service and price, even if you exercise your privacy rights.</li>
         </ul>
         To exercise your rights, please contact us at the email address below or visit our <a href="link-to-do-not-sell-page">Do Not Sell or Share My Personal Information</a> page.
-      </p>
+      </div>
       <h2>6. Data Retention</h2>
       <p>
         We will retain your personal data for as long as necessary to provide you with the Game and for the purposes set out in this Privacy Policy. We will also retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.
