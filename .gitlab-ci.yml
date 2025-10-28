@@ -1,0 +1,29 @@
+stages:
+  - build
+  - deploy
+
+build:
+  image: node:latest
+  stage: build
+  variables:
+    PUBLIC_URL: https://jolly-jolt-website-d9bad6.gitlab.io
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+pages:
+  image: alpine:latest
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - cp dist/index.html dist/404.html
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
